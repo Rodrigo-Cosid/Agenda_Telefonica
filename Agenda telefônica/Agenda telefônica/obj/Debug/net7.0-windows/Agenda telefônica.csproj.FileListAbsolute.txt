@@ -1,0 +1,20 @@
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\bin\Debug\net7.0-windows\Agenda telefônica.exe
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\bin\Debug\net7.0-windows\Agenda telefônica.deps.json
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\bin\Debug\net7.0-windows\Agenda telefônica.runtimeconfig.json
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\bin\Debug\net7.0-windows\Agenda telefônica.dll
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\bin\Debug\net7.0-windows\Agenda telefônica.pdb
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.csproj.AssemblyReference.cache
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda_telefônica.Home.resources
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.csproj.GenerateResource.cache
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.AssemblyInfoInputs.cache
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.AssemblyInfo.cs
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.dll
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\refint\Agenda telefônica.dll
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.pdb
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda telefônica.genruntimeconfig.cache
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\ref\Agenda telefônica.dll
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda_telefônica.Properties.Resources.resources
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda_telefônica.AddContact.resources
+C:\Users\Rodrigo\source\repos\Agenda telefônica\Agenda telefônica\obj\Debug\net7.0-windows\Agenda_telefônica.EditContact.resources
