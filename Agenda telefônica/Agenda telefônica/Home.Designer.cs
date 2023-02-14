@@ -39,6 +39,7 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
+            this.ClId = new System.Windows.Forms.ColumnHeader();
             this.PanelHigher.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,8 @@
             this.ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ClName,
             this.ClTelephone,
-            this.ClAddress});
+            this.ClAddress,
+            this.ClId});
             this.ListView.FullRowSelect = true;
             this.ListView.GridLines = true;
             this.ListView.Location = new System.Drawing.Point(94, 192);
@@ -83,17 +85,20 @@
             // 
             // ClName
             // 
+            this.ClName.DisplayIndex = 1;
             this.ClName.Text = "NOME";
             this.ClName.Width = 310;
             // 
             // ClTelephone
             // 
+            this.ClTelephone.DisplayIndex = 2;
             this.ClTelephone.Text = "TELEFÔNE";
             this.ClTelephone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClTelephone.Width = 310;
             // 
             // ClAddress
             // 
+            this.ClAddress.DisplayIndex = 3;
             this.ClAddress.Text = "ENDEREÇO";
             this.ClAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClAddress.Width = 400;
@@ -162,6 +167,11 @@
             this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // ClId
+            // 
+            this.ClId.DisplayIndex = 0;
+            this.ClId.Text = "ID";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -199,5 +209,6 @@
         private Button BtnDelete;
         private TextBox txtSearch;
         private Button BtnSearch;
+        private ColumnHeader ClId;
     }
 }
