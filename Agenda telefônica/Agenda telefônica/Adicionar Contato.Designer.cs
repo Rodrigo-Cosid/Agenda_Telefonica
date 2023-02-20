@@ -38,10 +38,10 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.TxtN = new System.Windows.Forms.TextBox();
+            this.TxtDistrict = new System.Windows.Forms.TextBox();
+            this.TxtHouseNo = new System.Windows.Forms.TextBox();
             this.TxtAddress = new System.Windows.Forms.TextBox();
-            this.TxtNumber = new System.Windows.Forms.TextBox();
+            this.TxtContactNo = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblBairro = new System.Windows.Forms.Label();
@@ -95,10 +95,10 @@
             this.PanelCenter.Controls.Add(this.btnSalvar);
             this.PanelCenter.Controls.Add(this.btnCancelar);
             this.PanelCenter.Controls.Add(this.txtCity);
-            this.PanelCenter.Controls.Add(this.txtBairro);
-            this.PanelCenter.Controls.Add(this.TxtN);
+            this.PanelCenter.Controls.Add(this.TxtDistrict);
+            this.PanelCenter.Controls.Add(this.TxtHouseNo);
             this.PanelCenter.Controls.Add(this.TxtAddress);
-            this.PanelCenter.Controls.Add(this.TxtNumber);
+            this.PanelCenter.Controls.Add(this.TxtContactNo);
             this.PanelCenter.Controls.Add(this.TxtName);
             this.PanelCenter.Controls.Add(this.lblCity);
             this.PanelCenter.Controls.Add(this.lblBairro);
@@ -410,19 +410,19 @@
             this.txtCity.Size = new System.Drawing.Size(189, 23);
             this.txtCity.TabIndex = 16;
             // 
-            // txtBairro
+            // TxtDistrict
             // 
-            this.txtBairro.Location = new System.Drawing.Point(625, 295);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(210, 23);
-            this.txtBairro.TabIndex = 15;
+            this.TxtDistrict.Location = new System.Drawing.Point(625, 295);
+            this.TxtDistrict.Name = "TxtDistrict";
+            this.TxtDistrict.Size = new System.Drawing.Size(210, 23);
+            this.TxtDistrict.TabIndex = 15;
             // 
-            // TxtN
+            // TxtHouseNo
             // 
-            this.TxtN.Location = new System.Drawing.Point(474, 295);
-            this.TxtN.Name = "TxtN";
-            this.TxtN.Size = new System.Drawing.Size(45, 23);
-            this.TxtN.TabIndex = 14;
+            this.TxtHouseNo.Location = new System.Drawing.Point(474, 295);
+            this.TxtHouseNo.Name = "TxtHouseNo";
+            this.TxtHouseNo.Size = new System.Drawing.Size(45, 23);
+            this.TxtHouseNo.TabIndex = 14;
             // 
             // TxtAddress
             // 
@@ -431,13 +431,13 @@
             this.TxtAddress.Size = new System.Drawing.Size(325, 23);
             this.TxtAddress.TabIndex = 13;
             // 
-            // TxtNumber
+            // TxtContactNo
             // 
-            this.TxtNumber.Location = new System.Drawing.Point(163, 202);
-            this.TxtNumber.Name = "TxtNumber";
-            this.TxtNumber.Size = new System.Drawing.Size(180, 23);
-            this.TxtNumber.TabIndex = 12;
-            this.TxtNumber.TextChanged += new System.EventHandler(this.TxtNumber_TextChanged);
+            this.TxtContactNo.Location = new System.Drawing.Point(163, 202);
+            this.TxtContactNo.Name = "TxtContactNo";
+            this.TxtContactNo.Size = new System.Drawing.Size(180, 23);
+            this.TxtContactNo.TabIndex = 12;
+            this.TxtContactNo.TextChanged += new System.EventHandler(this.TxtNumber_TextChanged);
             // 
             // TxtName
             // 
@@ -554,10 +554,10 @@
         private Button btnSalvar;
         private Button btnCancelar;
         private TextBox txtCity;
-        private TextBox txtBairro;
-        private TextBox TxtN;
+        private TextBox TxtDistrict;
+        private TextBox TxtHouseNo;
         private TextBox TxtAddress;
-        private TextBox TxtNumber;
+        private TextBox TxtContactNo;
         private TextBox TxtName;
         private ComboBox ComboBoxDDI;
         private Label LblNumero;

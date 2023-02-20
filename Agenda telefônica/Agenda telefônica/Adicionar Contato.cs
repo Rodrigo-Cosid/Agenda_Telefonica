@@ -7,11 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using System.Xml;
 
 namespace Agenda_telefônica
 {
     public partial class AddContact : Form
     {
+        public void Record(string Name, string ContactNo, string Address, string HouseNo, string District, string City)
+        {
+            XmlTextWriter DataContact;
+            DataContact = new XmlTextWriter("C:\\Users\\Rodrigo\\Documents\\GitHub-Agenda\\Agenda telefônica\\Agenda telefônica\\contato.xml", Encoding.UTF8);
+
+            DataContact.WriteStartElement("contato");
+            DataContact.WriteElementString("Name", Name.Trim());
+            DataContact.WriteElementString("ContactNo", ContactNo.Trim());
+            DataContact.WriteElementString("Address", Address.Trim());
+            DataContact.WriteElementString("HouseNo", HouseNo.Trim());
+            DataContact.WriteElementString("District", District.Trim());
+            DataContact.WriteElementString("City", City.Trim());
+            DataContact.WriteEndElement();
+            DataContact.Close();
+
+        }
+
+
+
         public AddContact()
         {
             InitializeComponent();
@@ -45,7 +66,7 @@ namespace Agenda_telefônica
                 Home cancelADD = new();
                 cancelADD.ShowDialog();
             }
-            //else {}
+            
         }
 
         private void TxtNumber_TextChanged(object sender, EventArgs e)
@@ -70,6 +91,16 @@ namespace Agenda_telefônica
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            AddContact ContactXML = new();
+
+            ContactXML.Record(TxtName.Text, TxtContactNo.Text, TxtAddress.Text, TxtHouseNo.Text, TxtDistrict.Text, txtCity.Text);
+            TxtName.Text = "";
+            TxtContactNo.Text = "";
+            TxtAddress.Text = "";
+            TxtHouseNo.Text = "";
+            TxtDistrict.Text = "";
+            txtCity.Text = "";
+
 
            
         }
