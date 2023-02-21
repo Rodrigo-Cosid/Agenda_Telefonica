@@ -1,1 +1,11 @@
-﻿<contato><Name>vvdvfdvdv</Name><ContactNo>132314</ContactNo><Address>dsfeveve</Address><HouseNo>324242</HouseNo><District>efvrfvrv</District><City>vfvev</City></contato>
+<contato>
+  <Contact>
+    <Name>Rodrigo</Name>
+    <DDI>Bielorrússia: +375</DDI>
+    <ContactNo>123456780</ContactNo>
+    <Address>Rua 2</Address>
+    <HouseNo>1223</HouseNo>
+    <District>Vila</District>
+    <City>Pirassununga</City>
+  </Contact>
+</contato>

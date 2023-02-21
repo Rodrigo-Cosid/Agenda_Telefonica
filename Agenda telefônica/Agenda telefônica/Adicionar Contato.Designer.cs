@@ -37,7 +37,7 @@
             this.ComboBoxDDI = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCity = new System.Windows.Forms.TextBox();
+            this.TxtCity = new System.Windows.Forms.TextBox();
             this.TxtDistrict = new System.Windows.Forms.TextBox();
             this.TxtHouseNo = new System.Windows.Forms.TextBox();
             this.TxtAddress = new System.Windows.Forms.TextBox();
@@ -94,7 +94,7 @@
             this.PanelCenter.Controls.Add(this.ComboBoxDDI);
             this.PanelCenter.Controls.Add(this.btnSalvar);
             this.PanelCenter.Controls.Add(this.btnCancelar);
-            this.PanelCenter.Controls.Add(this.txtCity);
+            this.PanelCenter.Controls.Add(this.TxtCity);
             this.PanelCenter.Controls.Add(this.TxtDistrict);
             this.PanelCenter.Controls.Add(this.TxtHouseNo);
             this.PanelCenter.Controls.Add(this.TxtAddress);
@@ -403,12 +403,13 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.BntCancelar_Click);
             // 
-            // txtCity
+            // TxtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(101, 349);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(189, 23);
-            this.txtCity.TabIndex = 16;
+            this.TxtCity.Location = new System.Drawing.Point(101, 349);
+            this.TxtCity.Name = "TxtCity";
+            this.TxtCity.Size = new System.Drawing.Size(189, 23);
+            this.TxtCity.TabIndex = 16;
+            this.TxtCity.TextChanged += new System.EventHandler(this.TxtCity_TextChanged);
             // 
             // TxtDistrict
             // 
@@ -553,7 +554,7 @@
         private Label lblRuaAv;
         private Button btnSalvar;
         private Button btnCancelar;
-        private TextBox txtCity;
+        private TextBox TxtCity;
         private TextBox TxtDistrict;
         private TextBox TxtHouseNo;
         private TextBox TxtAddress;
