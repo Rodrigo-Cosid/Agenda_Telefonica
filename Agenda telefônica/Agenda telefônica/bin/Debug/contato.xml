@@ -1,0 +1,52 @@
+<contato>
+  <Contact>
+    <Name>Rodrigo</Name>
+    <DDI>Bielorrússia: +375</DDI>
+    <ContactNo>123456780</ContactNo>
+    <Address>Rua 2</Address>
+    <HouseNo>1223</HouseNo>
+    <District>Vila</District>
+    <City>Pirassununga</City>
+  </Contact>
+  <Contact>
+    <Name>Rogerio</Name>
+    <DDI>Bósnia e Herzegovina: +387</DDI>
+    <ContactNo>1234567890</ContactNo>
+    <Address>Rua seis</Address>
+    <HouseNo>123</HouseNo>
+    <District>Vila Pinheiro</District>
+    <City>Leme</City>
+  </Contact>
+  <Contact>
+    <Name>
+    </Name>
+    <DDI>
+    </DDI>
+    <ContactNo>
+    </ContactNo>
+    <Address>
+    </Address>
+    <HouseNo>
+    </HouseNo>
+    <District>
+    </District>
+    <City>
+    </City>
+  </Contact>
+  <Contact>
+    <Name>
+    </Name>
+    <DDI>
+    </DDI>
+    <ContactNo>
+    </ContactNo>
+    <Address>
+    </Address>
+    <HouseNo>
+    </HouseNo>
+    <District>
+    </District>
+    <City>
+    </City>
+  </Contact>
+</contato>

@@ -36,7 +36,7 @@
             this.LblDDI = new System.Windows.Forms.Label();
             this.ComboBoxDDI = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.TxtCity = new System.Windows.Forms.TextBox();
             this.TxtDistrict = new System.Windows.Forms.TextBox();
             this.TxtHouseNo = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.PanelCenter.Controls.Add(this.LblDDI);
             this.PanelCenter.Controls.Add(this.ComboBoxDDI);
             this.PanelCenter.Controls.Add(this.btnSalvar);
-            this.PanelCenter.Controls.Add(this.btnCancelar);
+            this.PanelCenter.Controls.Add(this.btnSair);
             this.PanelCenter.Controls.Add(this.TxtCity);
             this.PanelCenter.Controls.Add(this.TxtDistrict);
             this.PanelCenter.Controls.Add(this.TxtHouseNo);
@@ -392,16 +392,16 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // btnCancelar
+            // btnSair
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.Location = new System.Drawing.Point(416, 464);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 17;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.BntCancelar_Click);
+            this.btnSair.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSair.Location = new System.Drawing.Point(416, 464);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(83, 23);
+            this.btnSair.TabIndex = 17;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.BntCancelar_Click);
             // 
             // TxtCity
             // 
@@ -553,7 +553,7 @@
         private Label lblN;
         private Label lblRuaAv;
         private Button btnSalvar;
-        private Button btnCancelar;
+        private Button btnSair;
         private TextBox TxtCity;
         private TextBox TxtDistrict;
         private TextBox TxtHouseNo;

@@ -30,16 +30,16 @@
         {
             this.PanelHigher = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.ListView = new System.Windows.Forms.ListView();
+            this.ListContact = new System.Windows.Forms.ListView();
             this.ClName = new System.Windows.Forms.ColumnHeader();
             this.ClTelephone = new System.Windows.Forms.ColumnHeader();
             this.ClAddress = new System.Windows.Forms.ColumnHeader();
+            this.ClId = new System.Windows.Forms.ColumnHeader();
             this.BtnToAdd = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
-            this.ClId = new System.Windows.Forms.ColumnHeader();
             this.PanelHigher.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,24 +64,24 @@
             this.lblTitle.Text = "Agenda Telefônica";
             this.lblTitle.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
-            // ListView
+            // ListContact
             // 
-            this.ListView.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListContact.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ListContact.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ClName,
             this.ClTelephone,
             this.ClAddress,
             this.ClId});
-            this.ListView.FullRowSelect = true;
-            this.ListView.GridLines = true;
-            this.ListView.Location = new System.Drawing.Point(94, 192);
-            this.ListView.MultiSelect = false;
-            this.ListView.Name = "ListView";
-            this.ListView.Size = new System.Drawing.Size(1000, 500);
-            this.ListView.TabIndex = 1;
-            this.ListView.UseCompatibleStateImageBehavior = false;
-            this.ListView.View = System.Windows.Forms.View.Details;
-            this.ListView.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged_1);
+            this.ListContact.FullRowSelect = true;
+            this.ListContact.GridLines = true;
+            this.ListContact.Location = new System.Drawing.Point(94, 192);
+            this.ListContact.MultiSelect = false;
+            this.ListContact.Name = "ListContact";
+            this.ListContact.Size = new System.Drawing.Size(1000, 500);
+            this.ListContact.TabIndex = 1;
+            this.ListContact.UseCompatibleStateImageBehavior = false;
+            this.ListContact.View = System.Windows.Forms.View.Details;
+            this.ListContact.SelectedIndexChanged += new System.EventHandler(this.ListContact_SelectedIndexChanged_1);
             // 
             // ClName
             // 
@@ -102,6 +102,11 @@
             this.ClAddress.Text = "ENDEREÇO";
             this.ClAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClAddress.Width = 400;
+            // 
+            // ClId
+            // 
+            this.ClId.DisplayIndex = 0;
+            this.ClId.Text = "ID";
             // 
             // BtnToAdd
             // 
@@ -167,11 +172,6 @@
             this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // ClId
-            // 
-            this.ClId.DisplayIndex = 0;
-            this.ClId.Text = "ID";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnToAdd);
-            this.Controls.Add(this.ListView);
+            this.Controls.Add(this.ListContact);
             this.Controls.Add(this.PanelHigher);
             this.Name = "Home";
             this.Text = "Agenda Telefônica";
@@ -200,7 +200,7 @@
 
         private Panel PanelHigher;
         private Label lblTitle;
-        private ListView ListView;
+        private ListView ListContact;
         private ColumnHeader ClName;
         private ColumnHeader ClTelephone;
         private ColumnHeader ClAddress;

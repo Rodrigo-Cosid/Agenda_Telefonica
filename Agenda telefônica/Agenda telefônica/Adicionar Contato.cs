@@ -42,7 +42,7 @@ namespace Agenda_telefônica
 
         private void BntCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja Cancelar está Aplicação?", "Cancelar", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Deseja Sair da Aplicação?", "Sair", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
                 Home cancelADD = new();
@@ -74,7 +74,7 @@ namespace Agenda_telefônica
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             XmlDocument DataContact = new();
-            DataContact.Load(@"C:\Users\Rodrigo\Documents\GitHub-Agenda\Agenda telefônica\Agenda telefônica\contato.xml");
+            DataContact.Load(@"..\contato.xml");
 
             XmlElement Contact = DataContact.CreateElement("Contact");
             XmlElement Name = DataContact.CreateElement("Name");
@@ -102,7 +102,7 @@ namespace Agenda_telefônica
             Contact.AppendChild(City);
 
             DataContact.DocumentElement.AppendChild(Contact);
-            DataContact.Save(@"C:\Users\Rodrigo\Documents\GitHub-Agenda\Agenda telefônica\Agenda telefônica\contato.xml");
+            DataContact.Save(@"..\contato.xml");
 
             TxtName.Clear();
             TxtContactNo.Clear();
@@ -112,9 +112,6 @@ namespace Agenda_telefônica
             TxtCity.Clear();
 
             MessageBox.Show("Salvo com sucesso", "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
 
         }
 

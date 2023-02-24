@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+
 namespace Agenda_telefônica
 {
     public partial class Home : Form
@@ -12,9 +14,24 @@ namespace Agenda_telefônica
 
         }
 
-        private void ListView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void ListContact_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            XDocument ContactXML = XDocument.Load(@"..\contato.xml");
 
+            foreach (var ListXML in ContactXML.Descendants("Contact"))
+            {
+
+                ListViewItem list = new ListViewItem(new string[]
+                {
+                    ListXML.Element("Name").Value,
+                    ListXML.Element("DDI").Value,
+                    ListXML.Element("ContactNo").Value,
+                    ListXML.Element("Address").Value
+                });
+
+                ListContact.Items.Add(list);
+
+            }
         }
 
         private void StatusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

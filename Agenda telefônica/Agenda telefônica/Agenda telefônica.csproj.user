@@ -4,9 +4,6 @@
     <Compile Update="Adicionar Contato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="AgendaTelefonica.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Editar Contato.cs">
       <SubType>Form</SubType>
     </Compile>
