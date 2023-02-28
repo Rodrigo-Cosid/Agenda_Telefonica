@@ -30,15 +30,15 @@
         {
             this.PanelHigher = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.ListContact = new System.Windows.Forms.ListView();
+            this.ListView = new System.Windows.Forms.ListView();
             this.ClName = new System.Windows.Forms.ColumnHeader();
+            this.ClDDI = new System.Windows.Forms.ColumnHeader();
             this.ClTelephone = new System.Windows.Forms.ColumnHeader();
             this.ClAddress = new System.Windows.Forms.ColumnHeader();
-            this.ClId = new System.Windows.Forms.ColumnHeader();
             this.BtnToAdd = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.PanelHigher.SuspendLayout();
             this.SuspendLayout();
@@ -64,49 +64,43 @@
             this.lblTitle.Text = "Agenda Telefônica";
             this.lblTitle.Click += new System.EventHandler(this.LblTitulo_Click);
             // 
-            // ListContact
+            // ListView
             // 
-            this.ListContact.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ListContact.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListView.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ClName,
+            this.ClDDI,
             this.ClTelephone,
-            this.ClAddress,
-            this.ClId});
-            this.ListContact.FullRowSelect = true;
-            this.ListContact.GridLines = true;
-            this.ListContact.Location = new System.Drawing.Point(94, 192);
-            this.ListContact.MultiSelect = false;
-            this.ListContact.Name = "ListContact";
-            this.ListContact.Size = new System.Drawing.Size(1000, 500);
-            this.ListContact.TabIndex = 1;
-            this.ListContact.UseCompatibleStateImageBehavior = false;
-            this.ListContact.View = System.Windows.Forms.View.Details;
-            this.ListContact.SelectedIndexChanged += new System.EventHandler(this.ListContact_SelectedIndexChanged_1);
+            this.ClAddress});
+            this.ListView.FullRowSelect = true;
+            this.ListView.GridLines = true;
+            this.ListView.Location = new System.Drawing.Point(94, 192);
+            this.ListView.Name = "ListView";
+            this.ListView.Size = new System.Drawing.Size(1000, 500);
+            this.ListView.TabIndex = 1;
+            this.ListView.UseCompatibleStateImageBehavior = false;
+            this.ListView.View = System.Windows.Forms.View.Details;
+            this.ListView.SelectedIndexChanged += new System.EventHandler(this.ListView_SelectedIndexChanged_1);
             // 
             // ClName
             // 
-            this.ClName.DisplayIndex = 1;
             this.ClName.Text = "NOME";
             this.ClName.Width = 310;
             // 
+            // ClDDI
+            // 
+            this.ClDDI.Text = "DDI";
+            this.ClDDI.Width = 200;
+            // 
             // ClTelephone
             // 
-            this.ClTelephone.DisplayIndex = 2;
             this.ClTelephone.Text = "TELEFÔNE";
-            this.ClTelephone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ClTelephone.Width = 310;
+            this.ClTelephone.Width = 200;
             // 
             // ClAddress
             // 
-            this.ClAddress.DisplayIndex = 3;
             this.ClAddress.Text = "ENDEREÇO";
-            this.ClAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClAddress.Width = 400;
-            // 
-            // ClId
-            // 
-            this.ClId.DisplayIndex = 0;
-            this.ClId.Text = "ID";
             // 
             // BtnToAdd
             // 
@@ -117,7 +111,7 @@
             this.BtnToAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnToAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnToAdd.Image = global::Agenda_telefônica.Properties.Resources.ADD_Contato;
-            this.BtnToAdd.Location = new System.Drawing.Point(94, 131);
+            this.BtnToAdd.Location = new System.Drawing.Point(94, 125);
             this.BtnToAdd.Name = "BtnToAdd";
             this.BtnToAdd.Size = new System.Drawing.Size(50, 55);
             this.BtnToAdd.TabIndex = 2;
@@ -131,7 +125,7 @@
             this.BtnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnEdit.Image = global::Agenda_telefônica.Properties.Resources.Edit_Contato;
-            this.BtnEdit.Location = new System.Drawing.Point(165, 131);
+            this.BtnEdit.Location = new System.Drawing.Point(150, 125);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(50, 55);
             this.BtnEdit.TabIndex = 3;
@@ -145,18 +139,20 @@
             this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnDelete.Image = global::Agenda_telefônica.Properties.Resources.Delete_Contato;
-            this.BtnDelete.Location = new System.Drawing.Point(235, 131);
+            this.BtnDelete.Location = new System.Drawing.Point(206, 125);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(50, 55);
             this.BtnDelete.TabIndex = 4;
             this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // txtSearch
+            // TxtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(842, 148);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(206, 23);
-            this.txtSearch.TabIndex = 5;
+            this.TxtSearch.Location = new System.Drawing.Point(842, 148);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(206, 23);
+            this.TxtSearch.TabIndex = 5;
+            this.TxtSearch.TextChanged += new System.EventHandler(this.TxtSearch_TextChanged);
             // 
             // BtnSearch
             // 
@@ -170,7 +166,7 @@
             this.BtnSearch.Size = new System.Drawing.Size(40, 37);
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.UseVisualStyleBackColor = false;
-            this.BtnSearch.Click += new System.EventHandler(this.Button1_Click);
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // Home
             // 
@@ -180,11 +176,11 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1188, 749);
             this.Controls.Add(this.BtnSearch);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnToAdd);
-            this.Controls.Add(this.ListContact);
+            this.Controls.Add(this.ListView);
             this.Controls.Add(this.PanelHigher);
             this.Name = "Home";
             this.Text = "Agenda Telefônica";
@@ -200,15 +196,15 @@
 
         private Panel PanelHigher;
         private Label lblTitle;
-        private ListView ListContact;
-        private ColumnHeader ClName;
-        private ColumnHeader ClTelephone;
-        private ColumnHeader ClAddress;
+        private ListView ListView;
         private Button BtnToAdd;
         private Button BtnEdit;
         private Button BtnDelete;
-        private TextBox txtSearch;
+        private TextBox TxtSearch;
         private Button BtnSearch;
-        private ColumnHeader ClId;
+        private ColumnHeader ClName;
+        private ColumnHeader ClTelephone;
+        private ColumnHeader ClAddress;
+        private ColumnHeader ClDDI;
     }
 }

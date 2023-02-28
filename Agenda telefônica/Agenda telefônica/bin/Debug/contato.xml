@@ -1,52 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <contato>
   <Contact>
-    <Name>Rodrigo</Name>
+    <Name>Fernando</Name>
+    <DDI>Bósnia e Herzegovina: +387</DDI>
+    <ContactNo>19072731</ContactNo>
+    <Address>Rua josé</Address>
+    <HouseNo>23</HouseNo>
+    <District>Pinheiro</District>
+    <City>Porto</City>
+  </Contact>
+  <Contact>
+    <Name>Rafaela</Name>
     <DDI>Bielorrússia: +375</DDI>
-    <ContactNo>123456780</ContactNo>
+    <ContactNo>193299412</ContactNo>
+    <Address>rua3</Address>
+    <HouseNo>1234</HouseNo>
+    <District>Londres</District>
+    <City>Rio</City>
+  </Contact>
+  <Contact>
+    <Name>Rodrigo</Name>
+    <DDI>Benim: +229</DDI>
+    <ContactNo>123456789</ContactNo>
     <Address>Rua 2</Address>
-    <HouseNo>1223</HouseNo>
+    <HouseNo>123</HouseNo>
     <District>Vila</District>
     <City>Pirassununga</City>
   </Contact>
   <Contact>
-    <Name>Rogerio</Name>
+    <Name>Daniel</Name>
+    <DDI>Bielorrússia: +375</DDI>
+    <ContactNo>123456</ContactNo>
+    <Address>rua</Address>
+    <HouseNo>890</HouseNo>
+    <District>vila s</District>
+    <City>leme</City>
+  </Contact>
+  <Contact>
+    <Name>grazi</Name>
+    <DDI>Bielorrússia: +375</DDI>
+    <ContactNo>2345678</ContactNo>
+    <Address>vila</Address>
+    <HouseNo>3456</HouseNo>
+    <District>ruu</District>
+    <City>Piracicaba</City>
+  </Contact>
+  <Contact>
+    <ID>1</ID>
+    <Name>Rodrigo</Name>
+    <DDI>Bermudas: +1</DDI>
+    <ContactNo>1234567890</ContactNo>
+    <Address>Rua josé</Address>
+    <HouseNo>123</HouseNo>
+    <District>Pinheiro</District>
+    <City>Porto</City>
+  </Contact>
+  <Contact>
+    <Name>Alessandro</Name>
     <DDI>Bósnia e Herzegovina: +387</DDI>
     <ContactNo>1234567890</ContactNo>
-    <Address>Rua seis</Address>
+    <Address>rua 3</Address>
     <HouseNo>123</HouseNo>
-    <District>Vila Pinheiro</District>
+    <District>pira</District>
     <City>Leme</City>
   </Contact>
   <Contact>
-    <Name>
-    </Name>
-    <DDI>
-    </DDI>
-    <ContactNo>
-    </ContactNo>
-    <Address>
-    </Address>
-    <HouseNo>
-    </HouseNo>
-    <District>
-    </District>
-    <City>
-    </City>
-  </Contact>
-  <Contact>
-    <Name>
-    </Name>
-    <DDI>
-    </DDI>
-    <ContactNo>
-    </ContactNo>
-    <Address>
-    </Address>
-    <HouseNo>
-    </HouseNo>
-    <District>
-    </District>
-    <City>
-    </City>
+    <Name>Gabriel</Name>
+    <DDI>Bélgica: +32</DDI>
+    <ContactNo>123456</ContactNo>
+    <Address>rua 5</Address>
+    <HouseNo>345</HouseNo>
+    <District>vila</District>
+    <City>Pira</City>
   </Contact>
 </contato>

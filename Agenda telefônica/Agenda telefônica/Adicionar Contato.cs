@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Xml;
+using System.Net.Security;
 
 namespace Agenda_telefônica
 {
     public partial class AddContact : Form
     {
-        
+         
+         
         public AddContact()
         {
             InitializeComponent();
@@ -73,6 +75,7 @@ namespace Agenda_telefônica
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+          
             XmlDocument DataContact = new();
             DataContact.Load(@"..\contato.xml");
 
@@ -112,10 +115,10 @@ namespace Agenda_telefônica
             TxtCity.Clear();
 
             MessageBox.Show("Salvo com sucesso", "Salvar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+             
         }
 
-        private void TxtCity_TextChanged(object sender, EventArgs e)
+        private void TxtName_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -32,7 +32,8 @@
             this.imgAdd = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelCenter = new System.Windows.Forms.Panel();
-            this.LblNumero = new System.Windows.Forms.Label();
+            this.TxtID = new System.Windows.Forms.TextBox();
+            this.LblContactNo = new System.Windows.Forms.Label();
             this.LblDDI = new System.Windows.Forms.Label();
             this.ComboBoxDDI = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -44,8 +45,8 @@
             this.TxtContactNo = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
-            this.lblBairro = new System.Windows.Forms.Label();
-            this.lblN = new System.Windows.Forms.Label();
+            this.lblDistrict = new System.Windows.Forms.Label();
+            this.lblHouseNo = new System.Windows.Forms.Label();
             this.lblRuaAv = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblTelephone = new System.Windows.Forms.Label();
@@ -89,7 +90,8 @@
             // PanelCenter
             // 
             this.PanelCenter.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.PanelCenter.Controls.Add(this.LblNumero);
+            this.PanelCenter.Controls.Add(this.TxtID);
+            this.PanelCenter.Controls.Add(this.LblContactNo);
             this.PanelCenter.Controls.Add(this.LblDDI);
             this.PanelCenter.Controls.Add(this.ComboBoxDDI);
             this.PanelCenter.Controls.Add(this.btnSalvar);
@@ -101,8 +103,8 @@
             this.PanelCenter.Controls.Add(this.TxtContactNo);
             this.PanelCenter.Controls.Add(this.TxtName);
             this.PanelCenter.Controls.Add(this.lblCity);
-            this.PanelCenter.Controls.Add(this.lblBairro);
-            this.PanelCenter.Controls.Add(this.lblN);
+            this.PanelCenter.Controls.Add(this.lblDistrict);
+            this.PanelCenter.Controls.Add(this.lblHouseNo);
             this.PanelCenter.Controls.Add(this.lblRuaAv);
             this.PanelCenter.Controls.Add(this.lblAddress);
             this.PanelCenter.Controls.Add(this.lblTelephone);
@@ -113,16 +115,23 @@
             this.PanelCenter.TabIndex = 2;
             this.PanelCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // LblNumero
+            // TxtID
             // 
-            this.LblNumero.AutoSize = true;
-            this.LblNumero.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LblNumero.Location = new System.Drawing.Point(163, 183);
-            this.LblNumero.Name = "LblNumero";
-            this.LblNumero.Size = new System.Drawing.Size(92, 16);
-            this.LblNumero.TabIndex = 21;
-            this.LblNumero.Text = "DDD+Número";
-            this.LblNumero.Click += new System.EventHandler(this.LblNumero_Click);
+            this.TxtID.Location = new System.Drawing.Point(965, 3);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(32, 23);
+            this.TxtID.TabIndex = 22;
+            // 
+            // LblContactNo
+            // 
+            this.LblContactNo.AutoSize = true;
+            this.LblContactNo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LblContactNo.Location = new System.Drawing.Point(163, 183);
+            this.LblContactNo.Name = "LblContactNo";
+            this.LblContactNo.Size = new System.Drawing.Size(92, 16);
+            this.LblContactNo.TabIndex = 21;
+            this.LblContactNo.Text = "DDD+Número";
+            this.LblContactNo.Click += new System.EventHandler(this.LblNumero_Click);
             // 
             // LblDDI
             // 
@@ -409,7 +418,6 @@
             this.TxtCity.Name = "TxtCity";
             this.TxtCity.Size = new System.Drawing.Size(189, 23);
             this.TxtCity.TabIndex = 16;
-            this.TxtCity.TextChanged += new System.EventHandler(this.TxtCity_TextChanged);
             // 
             // TxtDistrict
             // 
@@ -446,6 +454,7 @@
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(487, 23);
             this.TxtName.TabIndex = 10;
+            this.TxtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // lblCity
             // 
@@ -458,25 +467,25 @@
             this.lblCity.Text = "Cidade";
             this.lblCity.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // lblBairro
+            // lblDistrict
             // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblBairro.Location = new System.Drawing.Point(572, 299);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(47, 20);
-            this.lblBairro.TabIndex = 8;
-            this.lblBairro.Text = "Bairro";
+            this.lblDistrict.AutoSize = true;
+            this.lblDistrict.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDistrict.Location = new System.Drawing.Point(572, 299);
+            this.lblDistrict.Name = "lblDistrict";
+            this.lblDistrict.Size = new System.Drawing.Size(47, 20);
+            this.lblDistrict.TabIndex = 8;
+            this.lblDistrict.Text = "Bairro";
             // 
-            // lblN
+            // lblHouseNo
             // 
-            this.lblN.AutoSize = true;
-            this.lblN.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblN.Location = new System.Drawing.Point(445, 295);
-            this.lblN.Name = "lblN";
-            this.lblN.Size = new System.Drawing.Size(23, 20);
-            this.lblN.TabIndex = 7;
-            this.lblN.Text = "Nº";
+            this.lblHouseNo.AutoSize = true;
+            this.lblHouseNo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHouseNo.Location = new System.Drawing.Point(445, 295);
+            this.lblHouseNo.Name = "lblHouseNo";
+            this.lblHouseNo.Size = new System.Drawing.Size(23, 20);
+            this.lblHouseNo.TabIndex = 7;
+            this.lblHouseNo.Text = "Nº";
             // 
             // lblRuaAv
             // 
@@ -549,8 +558,8 @@
         private Label lblTelephone;
         private Label lblName;
         private Label lblCity;
-        private Label lblBairro;
-        private Label lblN;
+        private Label lblDistrict;
+        private Label lblHouseNo;
         private Label lblRuaAv;
         private Button btnSalvar;
         private Button btnSair;
@@ -561,7 +570,8 @@
         private TextBox TxtContactNo;
         private TextBox TxtName;
         private ComboBox ComboBoxDDI;
-        private Label LblNumero;
+        private Label LblContactNo;
         private Label LblDDI;
+        private TextBox TxtID;
     }
 }

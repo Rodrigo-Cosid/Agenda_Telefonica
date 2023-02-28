@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Xml.Linq;
 
 namespace Agenda_telefônica
 {
@@ -38,6 +39,21 @@ namespace Agenda_telefônica
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditContact_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
