@@ -12,6 +12,8 @@ using System.Xml;
 using System.Net.Security;
 using System.IO;
 using System.Drawing.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.XPath;
 
 namespace Agenda_telefônica
 {
@@ -23,16 +25,12 @@ namespace Agenda_telefônica
             InitializeComponent();
         }
 
-        private void ListView_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-           
-        }
+                    
         private void ListContact()
         {
-            DataSet XmlContact = new();
-
             ListView.Items.Clear();
-
+            DataSet XmlContact = new();
+                      
             XmlContact.ReadXml(@"..\contato.xml");
 
             ListViewItem item;
@@ -45,12 +43,48 @@ namespace Agenda_telefônica
                     ListXml[ "Name" ].ToString(),
                     ListXml["DDI"].ToString(),
                     ListXml["ContactNo"].ToString(),
-                    ListXml["Address"].ToString()});
-
+                    ListXml["Address"].ToString(),
+                    ListXml["HouseNO"].ToString(),
+                    ListXml["District"].ToString(),
+                    ListXml["City"].ToString()});
+               
                 ListView.Items.Add(item);
                 
             }
               
+        }
+
+        private void DataListView()
+        {
+            
+            if (ListView.SelectedItems.Count>0)
+            {
+
+                this.Hide();
+                EditContact Edit = new()
+                {
+                    NameLV = ListView.SelectedItems[0].Text,
+                    DDILV = ListView.SelectedItems[0].SubItems[1].Text,
+                    ContactNoLV = ListView.SelectedItems[0].SubItems[2].Text,
+                    AddressLV = ListView.SelectedItems[0].SubItems[3].Text,
+                    HouseNoLV = ListView.SelectedItems[0].SubItems[4].Text,
+                    DistrictLV = ListView.SelectedItems[0].SubItems[5].Text,
+                    CityLV = ListView.SelectedItems[0].SubItems[6].Text
+                };
+
+                Edit.Show();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Nenhum contato Selecionado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+        private void ListView_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
 
         private void StatusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -80,11 +114,12 @@ namespace Agenda_telefônica
 
         private void BntEdit_Click(object sender, EventArgs e)
         {
-                    this.Hide();
-                    EditContact Edit = new();
-                    Edit.ShowDialog();
-        }
 
+            DataListView();
+            
+
+        }
+      
         private void BntAdicionar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -100,11 +135,10 @@ namespace Agenda_telefônica
                 
                 if (item.SubItems[0].Text.ToLower().Contains( TxtSearch.Text.ToLower()))
                 {
-                    ListView.Focus();
                     item.Selected = true;
                     ListView.TopItem = item;
-                    break;
-
+                    ListView.Focus();
+                                                     
                 }
             }
 
@@ -119,22 +153,40 @@ namespace Agenda_telefônica
         {
 
         }
-
-       
-
+              
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-                        
-            if (MessageBox.Show("Deseja apagar este item?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            XmlDocument DataContact = new();
+            DataContact.Load(@"..\contato.xml");
+            XPathNavigator Navigation = DataContact.CreateNavigator();
+
+            if (ListView.SelectedItems.Count > 0)
             {
-                foreach (ListViewItem item in ListView.Items)
-                    if (item.Selected)
-                    {
-                        ListView.Items.RemoveAt(item.Index); 
-                       
-                       
-                    }
-                
+
+                if (MessageBox.Show("Deseja apagar este item?", "Deletar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Navigation.MoveToChild("contato", String.Empty);
+                    Navigation.MoveToChild("Contact", String.Empty);
+                   
+
+                    Navigation.DeleteSelf();
+
+                    Console.WriteLine("Position after delete: {0}", Navigation.Name);
+                    Console.WriteLine(Navigation.OuterXml);
+                    DataContact.Save(@"..\contato.xml");
+
+
+                    foreach (ListViewItem item in ListView.Items)
+                        if (item.Selected)
+                        {
+                            ListView.Items.RemoveAt(item.Index);
+                           
+                        }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum contato Selecionado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
            
         }

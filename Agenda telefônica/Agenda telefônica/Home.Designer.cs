@@ -35,6 +35,9 @@
             this.ClDDI = new System.Windows.Forms.ColumnHeader();
             this.ClTelephone = new System.Windows.Forms.ColumnHeader();
             this.ClAddress = new System.Windows.Forms.ColumnHeader();
+            this.ClHouseNo = new System.Windows.Forms.ColumnHeader();
+            this.ClDistric = new System.Windows.Forms.ColumnHeader();
+            this.ClCity = new System.Windows.Forms.ColumnHeader();
             this.BtnToAdd = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
@@ -66,12 +69,16 @@
             // 
             // ListView
             // 
+            this.ListView.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.ListView.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ClName,
             this.ClDDI,
             this.ClTelephone,
-            this.ClAddress});
+            this.ClAddress,
+            this.ClHouseNo,
+            this.ClDistric,
+            this.ClCity});
             this.ListView.FullRowSelect = true;
             this.ListView.GridLines = true;
             this.ListView.Location = new System.Drawing.Point(94, 192);
@@ -101,6 +108,21 @@
             // 
             this.ClAddress.Text = "ENDEREÇO";
             this.ClAddress.Width = 400;
+            // 
+            // ClHouseNo
+            // 
+            this.ClHouseNo.Text = "Nº";
+            this.ClHouseNo.Width = 55;
+            // 
+            // ClDistric
+            // 
+            this.ClDistric.Text = "Bairro";
+            this.ClDistric.Width = 100;
+            // 
+            // ClCity
+            // 
+            this.ClCity.Text = "Cidade";
+            this.ClCity.Width = 100;
             // 
             // BtnToAdd
             // 
@@ -206,5 +228,8 @@
         private ColumnHeader ClTelephone;
         private ColumnHeader ClAddress;
         private ColumnHeader ClDDI;
+        private ColumnHeader ClHouseNo;
+        private ColumnHeader ClDistric;
+        private ColumnHeader ClCity;
     }
 }

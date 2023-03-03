@@ -32,6 +32,7 @@
             this.ImgEdit = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelCenter = new System.Windows.Forms.Panel();
+            this.TxtContactNoEdit = new System.Windows.Forms.MaskedTextBox();
             this.ComboBoxDDIEdit = new System.Windows.Forms.ComboBox();
             this.LblContactNo = new System.Windows.Forms.Label();
             this.LblDDI = new System.Windows.Forms.Label();
@@ -41,8 +42,7 @@
             this.TxtDistrictEdit = new System.Windows.Forms.TextBox();
             this.TxtHouseNoEdit = new System.Windows.Forms.TextBox();
             this.TxtAddressEdit = new System.Windows.Forms.TextBox();
-            this.TxtContactNoEdit = new System.Windows.Forms.TextBox();
-            this.txtNameEdit = new System.Windows.Forms.TextBox();
+            this.TxtNameEdit = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblDistrict = new System.Windows.Forms.Label();
             this.lblHouseNo = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@
             // PanelCenter
             // 
             this.PanelCenter.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.PanelCenter.Controls.Add(this.TxtContactNoEdit);
             this.PanelCenter.Controls.Add(this.ComboBoxDDIEdit);
             this.PanelCenter.Controls.Add(this.LblContactNo);
             this.PanelCenter.Controls.Add(this.LblDDI);
@@ -98,8 +99,7 @@
             this.PanelCenter.Controls.Add(this.TxtDistrictEdit);
             this.PanelCenter.Controls.Add(this.TxtHouseNoEdit);
             this.PanelCenter.Controls.Add(this.TxtAddressEdit);
-            this.PanelCenter.Controls.Add(this.TxtContactNoEdit);
-            this.PanelCenter.Controls.Add(this.txtNameEdit);
+            this.PanelCenter.Controls.Add(this.TxtNameEdit);
             this.PanelCenter.Controls.Add(this.lblCity);
             this.PanelCenter.Controls.Add(this.lblDistrict);
             this.PanelCenter.Controls.Add(this.lblHouseNo);
@@ -111,6 +111,15 @@
             this.PanelCenter.Name = "PanelCenter";
             this.PanelCenter.Size = new System.Drawing.Size(1000, 500);
             this.PanelCenter.TabIndex = 3;
+            this.PanelCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCenter_Paint);
+            // 
+            // TxtContactNoEdit
+            // 
+            this.TxtContactNoEdit.Location = new System.Drawing.Point(165, 198);
+            this.TxtContactNoEdit.Mask = "(00) 00000-0000";
+            this.TxtContactNoEdit.Name = "TxtContactNoEdit";
+            this.TxtContactNoEdit.Size = new System.Drawing.Size(180, 23);
+            this.TxtContactNoEdit.TabIndex = 24;
             // 
             // ComboBoxDDIEdit
             // 
@@ -429,22 +438,13 @@
             this.TxtAddressEdit.Size = new System.Drawing.Size(325, 23);
             this.TxtAddressEdit.TabIndex = 13;
             // 
-            // TxtContactNoEdit
+            // TxtNameEdit
             // 
-            this.TxtContactNoEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TxtContactNoEdit.Location = new System.Drawing.Point(165, 198);
-            this.TxtContactNoEdit.Name = "TxtContactNoEdit";
-            this.TxtContactNoEdit.Size = new System.Drawing.Size(180, 23);
-            this.TxtContactNoEdit.TabIndex = 12;
-            this.TxtContactNoEdit.TextChanged += new System.EventHandler(this.TxtNumber_TextChanged);
-            // 
-            // txtNameEdit
-            // 
-            this.txtNameEdit.Location = new System.Drawing.Point(43, 70);
-            this.txtNameEdit.Name = "txtNameEdit";
-            this.txtNameEdit.Size = new System.Drawing.Size(487, 23);
-            this.txtNameEdit.TabIndex = 10;
-            this.txtNameEdit.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
+            this.TxtNameEdit.Location = new System.Drawing.Point(43, 70);
+            this.TxtNameEdit.Name = "TxtNameEdit";
+            this.TxtNameEdit.Size = new System.Drawing.Size(487, 23);
+            this.TxtNameEdit.TabIndex = 10;
+            this.TxtNameEdit.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // lblCity
             // 
@@ -548,8 +548,7 @@
         private TextBox TxtDistrictEdit;
         private TextBox TxtHouseNoEdit;
         private TextBox TxtAddressEdit;
-        private TextBox TxtContactNoEdit;
-        private TextBox txtNameEdit;
+        private TextBox TxtNameEdit;
         private Label lblCity;
         private Label lblDistrict;
         private Label lblHouseNo;
@@ -560,5 +559,6 @@
         private Label LblDDI;
         private Label LblContactNo;
         private ComboBox ComboBoxDDIEdit;
+        private MaskedTextBox TxtContactNoEdit;
     }
 }

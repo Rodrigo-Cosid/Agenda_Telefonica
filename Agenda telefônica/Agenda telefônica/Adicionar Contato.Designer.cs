@@ -32,7 +32,7 @@
             this.imgAdd = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.PanelCenter = new System.Windows.Forms.Panel();
-            this.TxtID = new System.Windows.Forms.TextBox();
+            this.TxtContactNo = new System.Windows.Forms.MaskedTextBox();
             this.LblContactNo = new System.Windows.Forms.Label();
             this.LblDDI = new System.Windows.Forms.Label();
             this.ComboBoxDDI = new System.Windows.Forms.ComboBox();
@@ -42,7 +42,6 @@
             this.TxtDistrict = new System.Windows.Forms.TextBox();
             this.TxtHouseNo = new System.Windows.Forms.TextBox();
             this.TxtAddress = new System.Windows.Forms.TextBox();
-            this.TxtContactNo = new System.Windows.Forms.TextBox();
             this.TxtName = new System.Windows.Forms.TextBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.lblDistrict = new System.Windows.Forms.Label();
@@ -90,7 +89,7 @@
             // PanelCenter
             // 
             this.PanelCenter.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.PanelCenter.Controls.Add(this.TxtID);
+            this.PanelCenter.Controls.Add(this.TxtContactNo);
             this.PanelCenter.Controls.Add(this.LblContactNo);
             this.PanelCenter.Controls.Add(this.LblDDI);
             this.PanelCenter.Controls.Add(this.ComboBoxDDI);
@@ -100,7 +99,6 @@
             this.PanelCenter.Controls.Add(this.TxtDistrict);
             this.PanelCenter.Controls.Add(this.TxtHouseNo);
             this.PanelCenter.Controls.Add(this.TxtAddress);
-            this.PanelCenter.Controls.Add(this.TxtContactNo);
             this.PanelCenter.Controls.Add(this.TxtName);
             this.PanelCenter.Controls.Add(this.lblCity);
             this.PanelCenter.Controls.Add(this.lblDistrict);
@@ -115,12 +113,14 @@
             this.PanelCenter.TabIndex = 2;
             this.PanelCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // TxtID
+            // TxtContactNo
             // 
-            this.TxtID.Location = new System.Drawing.Point(965, 3);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(32, 23);
-            this.TxtID.TabIndex = 22;
+            this.TxtContactNo.Location = new System.Drawing.Point(163, 202);
+            this.TxtContactNo.Mask = "(00) 00000-0000";
+            this.TxtContactNo.Name = "TxtContactNo";
+            this.TxtContactNo.Size = new System.Drawing.Size(180, 23);
+            this.TxtContactNo.TabIndex = 22;
+            this.TxtContactNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TxtContactNo_MaskInputRejected_1);
             // 
             // LblContactNo
             // 
@@ -440,14 +440,6 @@
             this.TxtAddress.Size = new System.Drawing.Size(325, 23);
             this.TxtAddress.TabIndex = 13;
             // 
-            // TxtContactNo
-            // 
-            this.TxtContactNo.Location = new System.Drawing.Point(163, 202);
-            this.TxtContactNo.Name = "TxtContactNo";
-            this.TxtContactNo.Size = new System.Drawing.Size(180, 23);
-            this.TxtContactNo.TabIndex = 12;
-            this.TxtContactNo.TextChanged += new System.EventHandler(this.TxtNumber_TextChanged);
-            // 
             // TxtName
             // 
             this.TxtName.Location = new System.Drawing.Point(43, 70);
@@ -567,11 +559,10 @@
         private TextBox TxtDistrict;
         private TextBox TxtHouseNo;
         private TextBox TxtAddress;
-        private TextBox TxtContactNo;
         private TextBox TxtName;
         private ComboBox ComboBoxDDI;
         private Label LblContactNo;
         private Label LblDDI;
-        private TextBox TxtID;
+        private MaskedTextBox TxtContactNo;
     }
 }
